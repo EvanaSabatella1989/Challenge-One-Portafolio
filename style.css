@@ -479,7 +479,7 @@ Utiliza las referencias de los breakpoints @media abajo */
 
 
 /*Tablet*/
-@media (max-width: 768px) {
+@media (min-width: 425px) and (max-width: 768px) {
 
 /* Menú */
 section.menu nav ul.menu__list li:nth-child(1){
@@ -515,16 +515,6 @@ section.menu{
     
     
 }
-
-/* section.menu nav{
-    
-    
-    border: 2px solid blue;
-
-    
-    
-} */
-
 
 
 /*title*/
@@ -785,20 +775,56 @@ section.footer{
 
 /*Menu*/
 
+section.menu nav ul.menu__list li:nth-child(1){
+    display: none;
+}
+section.menu nav ul.menu__list li:nth-child(2){
+    display: none;
+}
+section.menu nav ul.menu__list li:nth-child(3){
+    display: none;
+}
+section.menu nav ul.menu__list li:nth-child(4){
+    display: none;
+}
+section.menu nav ul.menu__list li:nth-child(5){
+    display: none;
+}
+
 section.menu{
    
-    width: 420px;
+    width: 120%;
     margin: 10px 5px 10px 15px;
-    justify-content: space-between;
+    justify-content: space-around;
     
 }
 
 .menu__header{
-    font-size: 13px;
-    width: 30%;
+    /* font-size: 30px; */
+    width: 50%;
     margin-left: 0;
-
+    justify-content: center;
 }
+
+.menu__header h3{
+    font-size: 30px;
+
+   
+}
+
+.menu__list{
+    width: 210%;
+    justify-content: flex-end;
+    font-size: 30px;
+    
+}
+
+.menu__list li a{
+    font-weight: normal;
+    color: var(--color-titulos);
+}
+
+
 
 section.menu nav{
     font-size: 13px;
@@ -807,11 +833,12 @@ section.menu nav{
 
 }
 
+
 /*Titulo*/
 
 section.title{
     
-    width: 420px;
+    width: 200%;
     margin: 10px 5px 10px 15px;
     justify-content: space-between;
     flex-direction: column;
@@ -822,49 +849,70 @@ section.title{
 }
 
 .title__profile{
-    margin: 30px 0px 0px 5px;
+    margin: 0px 0px 0px 5px;
+    width: 200px;
 }
 
 .title__bio{
-    font-size: 27px;
+    font-size: 53px;
+    line-height: 70px;
+    margin-bottom: 5px;
+    margin-left: 5px;
 }
 
 .title__subsection{
-    font-size: 17px;
+    font-size: 32px;
     width: 100%;
     font-weight: lighter;
+    margin-left: 5px;
+    margin-bottom: 0;
+    line-height: 35px;
 }
 
 .title__network{
     width: 100%;
-    font-weight: bold;
+    margin-left: 5px;
 }
 
 /*Sección sobre mi*/
 
 section.about{
     
-    width: 420px;
-    margin: 10px 5px 10px 15px;
+    width: 200%;
+    margin: 10px 0px 10px 0px;
     justify-content: space-between;
-    flex-direction: column;
-    padding-bottom: 25px;
+    /* flex-direction: column; */
+    padding: 0px 15px;
+}
+
+.about__container{
+    width: 100%;
+    font-size: 53px;
+    line-height: 70px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+
 }
 
 /*Skills*/
 
 section.skills{
    
-    width: 420px;
+    width: 200%;
     margin: 10px 5px 10px 15px;
     justify-content: space-between;
     flex-direction: column;
     padding-bottom: 25px;
 }
 
+.skills__title{
+    font-size: 50px;
+}
+
 section.skills div.skills__box{
-    width: 150px;
-    margin: 22px 0px 22px 0px;
+    width: 38%;
+    margin: 22px 30px 22px 30px;
+    height: 173px;
 }
 
 
@@ -872,46 +920,61 @@ section.skills div.skills__box{
 
 section.hobbies{
     
-    width: 420px;
+    width: 200%;
     margin: 10px 5px 10px 15px;
     justify-content: space-between;
     flex-direction: column;
     padding-bottom: 25px;
 }
 
+.hobbies__title{
+    font-size: 50px;
+}
+
 section.hobbies div.hobbies__box{
-    width: 150px;
-    margin: 22px 0px 22px 0px;
+    width: 38%;
+    margin: 22px 30px 22px 30px;
+    height: 173px;
 }
  
 /*Formación Académica*/
 
 section.academic{
     
-    width: 420px;
-    margin: 10px 5px 10px 15px;
+    width: 200%;
+    margin: 10px 0px 10px 0px;
     justify-content: space-between;
     flex-direction: column;
     padding-bottom: 25px;
 }
 
+.academic__title{
+    font-size: 50px;
+}
 
 section.academic div.academic__courses{
-    height: 650px;
+    height: 1172px;
     flex-wrap: wrap;
     padding: 0px 54px;
+    width: 80%;
 }
 
 .academic__courses__list{
-    width: 308px;
+    width: 100%;
 }
 
 .academic__courses__box{
     margin: 0px 0px;
+    width: 100%;
 }
 
 .academic__courses__item__title{
     line-height: 0;
+    font-size: 32px;
+}
+
+.academic__courses__item__subtitle{
+    font-size: 20px;
 }
 
 
@@ -919,82 +982,125 @@ section.academic div.academic__courses{
 
 section.experience{
     
-    width: 420px;
-    margin: 10px 5px 10px 15px;
+    width: 200%;
+    margin: 10px 0px 10px 0px;
     justify-content: space-between;
     flex-direction: column;
     padding-bottom: 25px;
+    /* padding: 50px 20px 100px 5px; */
+    padding: 0px 0px;
+}
+
+.experience__section__title{
+    font-size: 50px;
 }
 
 section.experience div.experiencie__box:nth-child(2){
-    width: 308px;
+    padding: 0px 0px;
+    width: 80%;
     margin: 40px auto;
+    border: 2px solid red;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.experience__img{
+    width: 100%;
 }
 
 section.experience div.experiencie__box:nth-child(3){
-    width: 308px;
+    padding: 0px 0px;
+    width: 80%;
     margin: 40px auto;
+    border: 2px solid red;
+    flex-wrap: wrap;
+    justify-content: flex-end;
 }
 
 section.experience div.experiencie__box:nth-child(4){
-    width: 308px;
+    padding: 0px 0px;
+    width: 80%;
     margin: 40px auto;
+    border: 2px solid red;
+    flex-wrap: wrap;
+    justify-content: flex-start;
 }
 
 section.experience div.experiencie__box:nth-child(5){
-    width: 308px;
+    padding: 0px 0px;
+    width: 80%;
     margin: 40px auto;
-    
-
+    border: 2px solid red;
+    flex-wrap: wrap;
+    justify-content: flex-end;
 }
 
 .experience__title{
-    font-size: 20px;
+    font-size: 32px;
 }
 
 .experience__text{
-    font-size: 16px;
+    font-size: 20px;
 }
 
 .experiencia__botao--repo{
     margin-right: 19px;
+    padding: 20px 27px;
+    font-size: 25px;
 }
 
  /*Contacto*/
 
  section.formcontato{
     
-    width: 420px;
-    margin: 10px 5px 10px 15px;
+    width: 200%;
+    margin: 10px 0px 10px 0px;
     justify-content: space-between;
     flex-direction: column;
     padding-bottom: 25px;
 }
 
+.formcontato--esquerda{
+    display: none;
+}
+
 section.formcontato div.formcontato__contacto{
-    width: 75%;
-    margin: 40px 0px 10px 45px;
+    width: 90%;
+    margin: 0px 0px;
     padding: 0px 0px;
 }
 
-.formcontato__subtext {
-    font-size: 17px;
+.formcontato__text{
+    width: 83%;
+
+}
+
+.formcontato__title{
+    font-size: 50px;
 }
 
 .formcontato__subtext {
-    margin-bottom: -12px;
+    font-size: 25px;
+    margin-bottom: 20px;
 }
 
+.formcontato__input{
+    height: 60px;
+    margin-bottom: 34px;
+}
+
+.formcontato__botao{
+    padding: 22px;
+    width: 183px;
+    font-size: 20px;
+}
 
 /*Footer*/
 
 section.footer{
-    
-    width: 420px;
-    margin: 10px 5px 10px 15px;
-    justify-content: space-between;
-    flex-direction: column;
-    padding-bottom: 25px;
+    width: 200%;
+    margin: 10px 0px 10px 0px;
+    padding: 25px 0px;
 }
 
 }
